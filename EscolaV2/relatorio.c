@@ -5,12 +5,14 @@
 #endif
 #include "relatorio.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 void relatorioProfAluno(pessoa listaProfAluno[]){
     printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo \n");
 
-    for(int index = 0; index < 40; index++){
+    for(int index = 0; index < 5; index++){
         if(listaProfAluno[index].matricula != 0){
-            printf("%d |-------| %s |-------| %s |-------| %s |-------| %s \n", listaProfAluno[index].matricula, listaProfAluno[index].nome, listaProfAluno[index].cpf, listaProfAluno[index].dataDeNascimento, listaProfAluno[index].sexo);
+            printf("%d |-------| %s |-------| %s |-------| %s |-------| %c \n", listaProfAluno[index].matricula, listaProfAluno[index].nome, listaProfAluno[index].cpf, listaProfAluno[index].dataDeNascimento, listaProfAluno[index].sexo);
         }
     }
 }
@@ -29,13 +31,13 @@ void relatorioProfAlunoPorSexo(pessoa lista[]){
     printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo \n");
         for(int index = 0; index < 40; index++){
             if(lista[index].matricula != 0 & (lista[index].sexo == 'M' || lista[index].sexo == 'm')){                
-                printf("%d |-------| %s |-------| %s |-------| %s |-------| %s \n", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
+                printf("%d |-------| %s |-------| %s |-------| %s |-------| %c \n", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
             }
         }
         
         for(int index = 0; index < 40; index++){
             if(lista[index].matricula != 0 & (lista[index].sexo == 'F' || lista[index].sexo == 'f')){                
-                printf("%d |-------| %s |-------| %s |-------| %s |-------| %s \n", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
+                printf("%d |-------| %s |-------| %s |-------| %s |-------| %c \n", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
             }
         }
     }

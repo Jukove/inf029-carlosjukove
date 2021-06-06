@@ -36,9 +36,8 @@ int main()
     int valData;
     do {
 
-        system("clear");
         printf("Escolha uma das opções:\n");
-        printf(" 1-Opções aluno\n 2-Opções professor\n 3-Opções disciplina\n 4-Lista Aluno \n 5-Lista Professor \n 6-Lista Disciplina");
+        printf(" 1-Opções aluno\n 2-Opções professor\n 3-Opções disciplina\n 4-Lista Aluno \n 5-Lista Professor \n 6-Lista Disciplina \n");
         scanf("%d", &opcao);
         switch(opcao){
            
@@ -132,10 +131,10 @@ int main()
                     }
                 }
                 while(opcaoSub != 0);
-            
+            break;
             case 2:
                 do{
-                    printf(" 1-cadastrar \n 2-editar\n 3-deletar\n 0-exit");
+                    printf(" 1-cadastrar \n 2-editar\n 3-deletar\n 0-exit \n");
                     scanf("%d", &opcaoSub);
                     switch(opcaoSub){
                         case 1:
