@@ -1,17 +1,21 @@
+#ifndef tipo_h
+#define tipo_h "struct.h"
+#include tipo_h
+#endif
+#include "cadastrar.h"
 #include <stdio.h>
 #include <string.h>
 #include "validacao.h"
-#include "cadastrar.h"
 
 void cadastrar(pessoa pessoas[], int *index){
     
     int valCpf;
     int valData;
-    printf("Digite o nome: %d");
-    scanf("%s", &pessoas[*index].nome); 
+    printf("Digite o nome:");
+    scanf("%s", pessoas[*index].nome); 
     do{
         printf("Digite o cpf(000.000.000-00):");
-        scanf("%s", &pessoas[*index].cpf);     
+        scanf("%s",pessoas[*index].cpf);     
         valCpf = validarCpf(pessoas[*index].cpf);
     }
     while(valCpf == 0);

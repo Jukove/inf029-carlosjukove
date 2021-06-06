@@ -1,13 +1,19 @@
-#include "relatorio.h"
-void relatorioProfAluno(pessoa listaProfAluno[]){
-        printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo \n");
 
-        for(int index = 0; index < 40; index++){
-            if(listaProfAluno[index].matricula != 0){
-                printf("%d |-------| %s |-------| %s |-------| %s |-------| %s \n", listaProfAluno[index].matricula, listaProfAluno[index].nome, listaProfAluno[index].cpf, listaProfAluno[index].dataDeNascimento, listaProfAluno[index].sexo);
-            }
+#ifndef tipo_h
+#define tipo_h "struct.h"
+#include tipo_h
+#endif
+#include "relatorio.h"
+#include <stdio.h>
+void relatorioProfAluno(pessoa listaProfAluno[]){
+    printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo \n");
+
+    for(int index = 0; index < 40; index++){
+        if(listaProfAluno[index].matricula != 0){
+            printf("%d |-------| %s |-------| %s |-------| %s |-------| %s \n", listaProfAluno[index].matricula, listaProfAluno[index].nome, listaProfAluno[index].cpf, listaProfAluno[index].dataDeNascimento, listaProfAluno[index].sexo);
         }
     }
+}
     
 void relatorioDisciplina(disciplina lista[]){
     printf("Código |-------| Nome |-------| Professor |-------| Semestre |-------| \n");

@@ -1,16 +1,12 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "relatorio.h"
+#include "struct.h"
 #include "cadastrar.h"
+#include "relatorio.h"
+#include "validacao.h"
+
 
 #define TAM 5
    
@@ -32,7 +28,7 @@ int main()
     char nome[50];
     char cpf[15];
     char data[12];
-    char sexo[1];
+    char sexo;
     char prof[50];
     int sem;
     int cod;
@@ -99,7 +95,8 @@ int main()
                                             case 4:
                                                 printf("digite o novo sexo:");
                                                 scanf("%s", &sexo);
-                                                strcpy(listaAlunos[index].sexo, sexo);
+                                            //    strcpy(listaAlunos[index].sexo, sexo);
+                                                listaAlunos[index].sexo = sexo;
                                             break;
                                         }
                                     }
@@ -190,7 +187,8 @@ int main()
                                             case 4:
                                                 printf("digite o novo sexo:");
                                                 scanf("%s", &sexo);
-                                                strcpy(listaAlunos[index].sexo, sexo);
+                                            //    strcpy(listaAlunos[index].sexo, sexo);
+                                                listaAlunos[index].sexo = sexo;
                                             break;
                                         }
                                     }
