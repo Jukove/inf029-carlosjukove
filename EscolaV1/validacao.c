@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include<stdlib.h>
+#ifndef tipo_h
+#define tipo_h "struct.h"
+#include tipo_h
+#endif
+#include "validacao.h"
 
 int validarData(char data[]){
     char digito;

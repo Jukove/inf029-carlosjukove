@@ -1,34 +1,17 @@
 #include <stdio.h>
 #include <string.h>
+#ifndef tipo_h
+#define tipo_h "struct.h"
+#include tipo_h
+#endif
+#include "relatorio.h"
 
-typedef struct{
-        int matricula;
-        char nome[50];
-        char dataDeNascimento[13];
-        char cpf[15];
-        char sexo[1];
-    } pessoa;
-
-    /*typedef struct{
-        int matricula;
-        char nome[50];
-        char dataDeNascimento[13];
-        char cpf[15];
-        char sexo[1];
-    } professor;
-    */
-    typedef struct{
-        int codigo;
-        char nome[50];
-        char professor[50];
-        int semestre;
-    } disciplina; 
 
 void relatorioProfAluno(pessoa lista[]){
         for(int index = 0; index < 40; index++){
             if(lista[index].matricula != 0){
                 printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo \n");
-                printf("%d |-------| %s |-------| %s |-------| %s |-------| %s", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
+                printf("%d |-------| %s |-------| %s |-------| %s |-------| %c", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
             }
         }
     }
@@ -46,7 +29,7 @@ void relatorioProfAlunoPorSexo(pessoa lista[]){
         for(int index = 0; index < 40; index++){
             if(lista[index].matricula != 0 && (lista[index].sexo == 'M' || lista[index].sexo == 'm')){
                 printf("Matricula |-------| Nome |-------| CPF |-------| Data de nascimento |-------| sexo");
-                printf("%d |-------| %s |-------| %s |-------| %s |-------| %s", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
+                printf("%d |-------| %s |-------| %s |-------| %s |-------| %c", lista[index].matricula, lista[index].nome, lista[index].cpf, lista[index].dataDeNascimento, lista[index].sexo);
             }
         }
         

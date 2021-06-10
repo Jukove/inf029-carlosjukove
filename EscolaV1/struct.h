@@ -1,4 +1,3 @@
-
 typedef struct{
         int matricula;
         char nome[50];
@@ -6,7 +5,7 @@ typedef struct{
         char cpf[15];
         char sexo;
     } pessoa;
-    
+
     /*typedef struct{
         int matricula;
         char nome[50];
@@ -21,11 +20,3 @@ typedef struct{
         char professor[50];
         int semestre;
     } disciplina;
-    /*typedef struct{
-        int matricula;
-        char nome[50];
-        char cpf[15];
-        char sexo[1];
-    } professor;
-    */
-    

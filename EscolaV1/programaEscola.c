@@ -1,30 +1,10 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "struct.h"
 #include "validacao.h"
 #include "relatorio.h"
-typedef struct{
-        int matricula;
-        char nome[50];
-        char dataDeNascimento[13];
-        char cpf[15];
-        char sexo[1];
-    } pessoa;
 
-    /*typedef struct{
-        int matricula;
-        char nome[50];
-        char dataDeNascimento[13];
-        char cpf[15];
-        char sexo[1];
-    } professor;
-    */
-    typedef struct{
-        int codigo;
-        char nome[50];
-        char professor[50];
-        int semestre;
-    } disciplina;
 int main()
 {
     
@@ -42,7 +22,7 @@ int main()
     char nome[50];
     char cpf[15];
     char data[12];
-    char sexo[1];
+    char sexo;
     char prof[50];
     int sem;
     int cod;
@@ -50,7 +30,6 @@ int main()
     int valData;
     do {
 
-        system("clear");
         printf("Escolha uma das opções:\n");
         printf(" 1-Opções aluno\n 2-Opções professor\n 3-Opções disciplina\n");
         scanf("%d", &opcao);
@@ -129,7 +108,7 @@ int main()
                                             case 4:
                                                 printf("digite o novo sexo:");
                                                 scanf("%s", &sexo);
-                                                strcpy(listaAlunos[index].sexo, sexo);
+                                                listaAlunos[index].sexo = sexo;
                                             break;
                                         }
                                     }
@@ -165,7 +144,7 @@ int main()
                     }
                 }
                 while(opcaoSub != 0);
-            
+            break;
            /* case 2:
                 do{
                     printf(" 1-cadastrar \n 2-editar\n 3-deletar\n 0-exit");
