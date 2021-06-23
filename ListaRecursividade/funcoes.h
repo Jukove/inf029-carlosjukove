@@ -1,0 +1,15 @@
+int fatorial(int n);
+int fibonacci(int n);
+int inverter(int n);
+int somarVetor(int *vetor, int tam);
+int somar(int n);
+int ocorrencia(int n, int dig);
+int printCresc(int n, int ini);
+int multiRec(int fator, int num );
+int printDesc(int n);
+int multInterv(int ini, int final, int inc);
+int func(int n);
+int somarSeq(int n);
+int mediaVetor(int *vetor, int tam, int atual);
+int pot(int n, int atual);
+int fatorialDuplo(int n);
